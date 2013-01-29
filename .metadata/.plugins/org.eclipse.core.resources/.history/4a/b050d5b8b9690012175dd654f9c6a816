@@ -1,0 +1,46 @@
+package Monitor;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Monitor extends JFrame {
+
+	/**
+	 * @param args
+	 */
+	int width,  height;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Monitor m=new Monitor(512, 512);
+		
+		m.pack();
+		m.setVisible(true);
+		
+
+	}
+	public Monitor(int width, int height){
+		this.width=width;
+		this.height=height;
+		setResizable(false);
+	}
+	public void repaint() {
+		// TODO Auto-generated method stub
+		super.repaint();
+		this.setSize(1027, 768);
+	}
+	public void paint(Graphics arg0) {
+		// TODO Auto-generated method stub
+		this.setSize(1027, 768);
+		Graphics2D g=(Graphics2D)arg0;
+		g.setColor(Color.BLACK);
+		
+		g.fillRect(0, 0, width, height);
+	}
+
+}

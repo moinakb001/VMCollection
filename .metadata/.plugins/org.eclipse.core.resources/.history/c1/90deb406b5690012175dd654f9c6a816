@@ -1,0 +1,10 @@
+package CPU;
+
+public class CPU {
+Flags flags=new Flags(0);
+Register eax=new Register("eax", flags), ebx=new Register("eax", flags), ecx=new Register("eax", flags), edx=new Register("eax", flags);
+	public void process_Opcode(byte opcode, boolean isTwoBit,byte mod, byte sib, byte[] displacement, byte[] immediate  ){
+		
+	}
+	
+}

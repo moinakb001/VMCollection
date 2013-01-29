@@ -1,0 +1,48 @@
+package Monitor;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Monitor extends JPanel {
+
+	/**
+	 * @param args
+	 */
+	int width,  height;
+	byte[][] red;
+	byte[][] blue;
+	byte[][] green;
+	byte[][] alpha;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+	public Monitor(int width, int height){
+		
+		this.width=width;
+		this.height=height;
+		red=new byte[width][height];
+		
+	}
+	
+	public void paint(Graphics arg0) {
+		// TODO Auto-generated method stub
+		
+		Graphics2D g=(Graphics2D)arg0;
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array.length; j++) {
+				g.setColor(new Color(red[], arg1, arg2, arg3))
+				g.drawRect(i, j, i, j);
+			}
+		}
+	}
+
+}

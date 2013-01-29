@@ -1,0 +1,52 @@
+package Monitor;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Monitor extends BufferedImage {
+
+	/**
+	 * @param args
+	 */
+	int width,  height;
+	int[][] red;
+	int[][] blue;
+	int[][] green;
+	int[][] alpha;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(Byte.MAX_VALUE);
+		JFrame f=new JFrame();
+		f.add(new Monitor(100, 100));
+		f.pack();
+		f.setVisible(true);
+		f.setSize(100, 100);
+		
+
+	}
+	public Monitor(int width, int height){
+		
+		this.width=width;
+		this.height=height;
+		red=new int[width][height];
+		green=new int[width][height];
+		blue=new int[width][height];
+		alpha=new int[width][height];
+		for (int i = 0; i < width; i++) {
+			for (int j = 0; j < height; j++) {
+				red[i][j]= 255;
+			}
+		}
+		
+	}
+	
+	
+
+}
