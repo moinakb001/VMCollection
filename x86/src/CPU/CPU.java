@@ -2,21 +2,21 @@ package CPU;
 
 public class CPU {
 Flags flags=new Flags(0);
-Register eax=new Register("eax", flags), ebx=new Register("ebx", flags), ecx=new Register("ecx", flags), edx=new Register("edx", flags);
-byte[] memory;
-public CPU(byte[] memory) throws NotEnoughMemoryException {
+Register eax=new Register("eax", flags), ebx=new Register("ebx", flags), ecx=new Register("ecx", flags), edx=new Register("edx", flags),edi=new Register("edi", flags),esi=Register("esi", flags),ebp=Register("ebp", flags),esp=Register("esp", flags), eip=Register("eip", flags);
+
+Memory memory;
+public CPU(Memory memory) throws NotEnoughMemoryException {
 	// TODO Auto-generated constructor stub
 	this.memory=memory;
-	if(memory.length<1048576){
-		throw new NotEnoughMemoryException();
-	}
+	
 	
 	
 }	
 public Register[] getRegisters(){
 	return new Register[]{eax,ebx,ecx,edx};
 }
-public void process_Opcode(byte opcode, boolean isTwoBit,byte mod, byte sib, byte[] displacement, byte[] immediate  ){
+public void process_epi(){
+	if()
 		if(!isTwoBit){
 			for (int i = 0; i < immediate.length; i++) {
 				
