@@ -1,0 +1,61 @@
+package Memory;
+
+public class Memory {
+
+	/**
+	 * @param args
+	 */
+	byte[] memory;
+	public Memory(int size) {
+		// TODO Auto-generated constructor stub
+		memory=new byte[size];
+	}
+	public byte read8(int ind){
+		return memory[ind];
+	}
+	public byte read16(int ind){
+		return memory[ind];
+	}
+	public byte read32(int ind){
+		return memory[ind];
+	}
+	public byte read64(int ind){
+		return memory[ind];
+	}
+	public boolean isreserverd(int index){
+		boolean b=false;
+		//implement this
+		//...
+		return b;
+	}
+	public boolean write8(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	public boolean write16(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	public boolean write32(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	public boolean write64(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	
+
+}

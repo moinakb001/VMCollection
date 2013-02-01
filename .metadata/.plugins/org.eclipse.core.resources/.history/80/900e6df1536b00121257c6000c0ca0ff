@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+
+
+
+
+public class Hello extends JFrame{
+public static void main(String[] args){
+	Hello j=new Hello();
+	j.pack();
+	j.setVisible(true);
+}
+}

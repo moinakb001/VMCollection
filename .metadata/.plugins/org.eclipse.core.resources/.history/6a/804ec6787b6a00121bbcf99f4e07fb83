@@ -1,0 +1,26 @@
+package CPU;
+
+public class Register {
+	String name;
+	long value=0x00000000L;
+	Flags f;
+public Register(String name, Flags flags ) {
+	// TODO Auto-generated constructor stub
+	this.name=name;
+	this.f=flags;
+}
+public String toString() {
+	// TODO Auto-generated method stub
+	return name+"-"+Long.toHexString(value);
+}
+public void add(long val){
+	long g=value+val;
+	if(g>0xFFFFFFFFL){
+		
+		f.setFlag((byte)0,true);
+	}
+	
+	
+}
+
+}

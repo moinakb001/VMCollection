@@ -1,0 +1,31 @@
+package Memory;
+
+public class Memory {
+
+	/**
+	 * @param args
+	 */
+	byte[] memory;
+	public Memory(int size) {
+		// TODO Auto-generated constructor stub
+		memory=new byte[size];
+	}
+	public byte getindex(int ind){
+		return memory[ind];
+	}
+	public boolean isreserverd(int index){
+		boolean b=false;
+		//implement this
+		//...
+		return b;
+	}
+	public boolean write(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	
+
+}

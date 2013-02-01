@@ -1,0 +1,20 @@
+package CPU;
+
+public class Register {
+	String name;
+	int value=0x00000000;
+public Register(String name, Flags flags ) {
+	// TODO Auto-generated constructor stub
+	this.name=name;
+}
+public String toString() {
+	// TODO Auto-generated method stub
+	return name+"-"+Integer.toHexString(value);
+}
+public void add(int val){
+	int t=value+val;
+	
+	
+}
+
+}

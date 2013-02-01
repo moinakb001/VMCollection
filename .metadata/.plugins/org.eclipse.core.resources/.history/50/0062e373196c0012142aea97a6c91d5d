@@ -1,0 +1,77 @@
+package Memory;
+
+public class Memory {
+
+	/**
+	 * @param args
+	 */
+	byte[] memory;
+	public Memory(int size) {
+		// TODO Auto-generated constructor stub
+		memory=new byte[size];
+	}
+	public byte read8(int ind){
+		return memory[ind];
+	}
+	public short read16(int ind){
+		short a1=(short) (memory[ind]&0xFF);
+		short a2=(short) (memory[ind+1]&0xFF);
+		return (short) ((a1<<8)+a2);
+	}
+	public int read32(int ind){
+		int a1= (memory[ind]&0xFF);
+		int a2= (memory[ind+1]&0xFF);
+		int a3= (memory[ind+2]&0xFF);
+		int a4= (memory[ind+3]&0xFF);
+		
+		return  ((a1<<24)+(a2<<16)+(a3<<8)+a4);
+		
+	}
+	public long read64(int ind){
+		int a1= (memory[ind]&0xFF);
+		int a2= (memory[ind+1]&0xFF);
+		int a3= (memory[ind+2]&0xFF);
+		int a4= (memory[ind+3]&0xFF);
+		int a5= (memory[ind+4]&0xFF);
+		int a6= (memory[ind+5]&0xFF);
+		int a7= (memory[ind+6]&0xFF);
+		int a8= (memory[ind+7]&0xFF);
+		return  ((a1<<56)+(a2<<48)+(a3<<40)+(a4<<32)+(a5<<24)+(a6<<16)+(a7<<8)+a8);
+	}
+	public boolean isreserverd(int index){
+		boolean b=false;
+		//implement this
+		//...
+		return b;
+	}
+	public boolean write8(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	public boolean write16(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	public boolean write32(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	public boolean write64(int ind, byte s){
+		if(!isreserverd(ind)){
+			memory[ind]=s;
+			return true;
+		}
+		return false;
+	}
+	
+
+}

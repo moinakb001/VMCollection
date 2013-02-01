@@ -1,7 +1,7 @@
 package CPU;
 
 public class Flags {
-	 int eflags=0;
+	 long eflags=0L;
 public Flags(int eflags) {
 	// TODO Auto-generated constructor stub
 	this.eflags=eflags;

@@ -1,0 +1,15 @@
+package Memory;
+
+public class Memory {
+
+	/**
+	 * @param args
+	 */
+	byte[] memory;
+	public Memory(int size) {
+		// TODO Auto-generated constructor stub
+		memory=new byte[size];
+	}
+	
+
+}
