@@ -14,29 +14,29 @@ public class Memory {
 		return memory[ind];
 	}
 	public short read16(int ind){
-		short a1=(short) (memory[ind]&0xFF);
-		short a2=(short) (memory[ind+1]&0xFF);
+		short a2=(short) (memory[ind]&0xFF);
+		short a1=(short) (memory[ind+1]&0xFF);
 		return (short) ((a1<<8)+a2);
 	}
 	public int read32(int ind){
-		int a1= (memory[ind]&0xFF);
-		int a2= (memory[ind+1]&0xFF);
-		int a3= (memory[ind+2]&0xFF);
-		int a4= (memory[ind+3]&0xFF);
+		int a4= (memory[ind]&0xFF);
+		int a3= (memory[ind+1]&0xFF);
+		int a2= (memory[ind+2]&0xFF);
+		int a1= (memory[ind+3]&0xFF);
 		
 		return  ((a1<<24)+(a2<<16)+(a3<<8)+a4);
 		
 	}
 	public long read64(int ind){
 		
-		int a1= (memory[ind]&0xFF);
-		int a2= (memory[ind+1]&0xFF);
-		int a3= (memory[ind+2]&0xFF);
-		int a4= (memory[ind+3]&0xFF);
-		int a5= (memory[ind+4]&0xFF);
-		int a6= (memory[ind+5]&0xFF);
-		int a7= (memory[ind+6]&0xFF);
-		int a8= (memory[ind+7]&0xFF);
+		int a8= (memory[ind]&0xFF);
+		int a7= (memory[ind+1]&0xFF);
+		int a6= (memory[ind+2]&0xFF);
+		int a5= (memory[ind+3]&0xFF);
+		int a4= (memory[ind+4]&0xFF);
+		int a3= (memory[ind+5]&0xFF);
+		int a2= (memory[ind+6]&0xFF);
+		int a1= (memory[ind+7]&0xFF);
 		return  (((long)(a1<<56))+((long)(a2<<48))+((long)(a3<<40))+((long)(a4<<32))+((long)(a5<<24))+((long)(a6<<16))+((long)(a7<<8))+((long)a8));
 	}
 	public boolean isreserved(int index){
@@ -53,14 +53,14 @@ public class Memory {
 		return false;
 	}
 	public boolean write16(int ind,short s){
-		return write8(ind,(byte) (s>>>8))&&write8(ind+1,(byte) (s));
+		return write8(ind+1,(byte) (s>>>8))&&write8(ind,(byte) (s));
 	}
 	public boolean write32(int ind, int s){
-		return write16(ind,(short) (s>>>16))&&write16(ind+2, (short)s);
+		return write16(ind+2,(short) (s>>>16))&&write16(ind, (short)s);
 	}
 	public boolean write64(int ind, long s){
 		
-		return write32(ind,(int) (s>>>32))&&write32(ind+4, (int)s);
+		return write32(ind+4,(int) (s>>>32))&&write32(ind, (int)s);
 	}
 	
 

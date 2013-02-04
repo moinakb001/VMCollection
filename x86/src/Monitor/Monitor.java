@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import CPU.CPU;
 import CPU.NotEnoughMemoryException;
 import CPU.Register;
+import Memory.Memory;
 
 public class Monitor extends JPanel {
 
@@ -39,7 +40,7 @@ public class Monitor extends JPanel {
 		f.setResizable(false);
 		f.setVisible(true);
 		f.setSize(512, 512);
-		m.throwup(new CPU(new byte[1024*1024]));
+		m.throwup(new CPU(new Memory(1024)));
 		
 
 	}

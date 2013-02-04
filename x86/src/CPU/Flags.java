@@ -1,7 +1,7 @@
 package CPU;
 
 public class Flags {
-	 long eflags=0L;
+	 int eflags=0;
 public Flags(int eflags) {
 	// TODO Auto-generated constructor stub
 	this.eflags=eflags;
@@ -15,7 +15,7 @@ public void setFlag(byte orig, boolean b){
 	}
 }
 public boolean getFlag(byte pos){
-	return (eflags&1<<pos)!=0;
+	return (eflags&(1<<pos))!=0;
 	
 }
 }
