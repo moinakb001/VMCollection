@@ -5,20 +5,15 @@ import Memory.Memory;
 public class CPU {
 	Flags flags=new Flags(0);
 	Register eax=new Register("eax", flags), ebx=new Register("ebx", flags), ecx=new Register("ecx", flags), edx=new Register("edx", flags),edi=new Register("edi", flags),esi=new Register("esi", flags),ebp=new Register("ebp", flags),esp=new Register("esp", flags), eip=new Register("eip", flags);
-
+	Register[] general=new Register[]{};
+	Register[] debug=new Register};
 	Memory memory;
 	public CPU(Memory memory) throws NotEnoughMemoryException {
 		// TODO Auto-generated constructor stub
 		this.memory=memory;
 
 
-
-	}	
-	public Register[] getRegisters(){
-		return new Register[]{eax,ebx,ecx,edx};
-	}
-	public void process_epi(){
-		boolean istwo=false;
+=false;
 		byte opcode = memory.read8(eip.value);
 		if(opcode==15){
 			eip.value++;
@@ -28,6 +23,7 @@ public class CPU {
 		if(!istwo){
 			byte without=(byte) (opcode&0xFC);
 			if(without==0){
+				
 				
 				byte b=memory.read8(eip.value);
 						eip.value++;

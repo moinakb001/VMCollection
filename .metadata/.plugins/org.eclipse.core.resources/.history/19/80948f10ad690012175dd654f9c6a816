@@ -1,7 +1,0 @@
-package CPU;
-
-public class CPU {
-Flags flags=new Flags(0);
-Register eax=new Register("eax", flags), ebx, ecx, edx;
-	public voi
-}

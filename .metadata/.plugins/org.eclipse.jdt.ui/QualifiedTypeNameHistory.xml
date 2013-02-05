@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="java.awt.image.ImageObserver"/>
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 <fullyQualifiedTypeName name="java.awt.Font"/>
-<fullyQualifiedTypeName name="CPU.Register"/>
 <fullyQualifiedTypeName name="CPU.CPU"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="java.net.Socket"/>
@@ -37,4 +36,5 @@
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
 <fullyQualifiedTypeName name="org.jnetpcap.winpcap.WinPcap"/>
 <fullyQualifiedTypeName name="Memory.Memory"/>
+<fullyQualifiedTypeName name="CPU.Register"/>
 </qualifiedTypeNameHistroy>
