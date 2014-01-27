@@ -40,7 +40,7 @@ public class Monitor extends JPanel {
 		f.setResizable(false);
 		f.setVisible(true);
 		f.setSize(512, 512);
-		m.throwup(new CPU(new Memory(1024)));
+		m.throwup(new CPU(new Memory(1024*1024*2)));
 		
 
 	}
@@ -62,7 +62,7 @@ public class Monitor extends JPanel {
 	public  void throwup(Register[] registers){
 		Graphics2D g=(Graphics2D) canvas.getGraphics();
 		g.setFont(new Font("Arial",Font.ITALIC,20));
-		g.setColor(Color.WHITE);
+		g.setColor(Color.red);
 		g.drawString("System Error!", 5,20);
 		int index=1;
 		for (Register register : registers) {

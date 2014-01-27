@@ -1,13 +1,18 @@
 package Memory;
 
+import CPU.NotEnoughMemoryException;
+
 public class Memory {
 
 	/**
 	 * @param args
 	 */
 	byte[] memory;
-	public Memory(int size) {
+	public Memory(int size) throws NotEnoughMemoryException {
 		// TODO Auto-generated constructor stub
+		if(size<1024*1024){
+			throw new NotEnoughMemoryException();
+		}
 		memory=new byte[size];
 	}
 	public byte read8(int ind){
