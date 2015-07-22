@@ -6,15 +6,13 @@ public Flags(int eflags) {
 	// TODO Auto-generated constructor stub
 	this.eflags=eflags;
 }
-public void setFlag(byte orig, boolean b){
+public void setFlag(int orig, boolean b){
 	
-	if(b){
-		eflags=(eflags|(1<<orig));
-	}else {
-		eflags=(eflags&(0<<orig));
-	}
+	
+		eflags=(eflags|((b?1:0)<<orig));
+	
 }
-public boolean getFlag(byte pos){
+public boolean getFlag(int pos){
 	return (eflags&(1<<pos))!=0;
 	
 }
